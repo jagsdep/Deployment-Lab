@@ -9,6 +9,7 @@ app.get('/', (req, res) => {
 })//normal get endpoint first parameter is backslash/2nd is callback function. Inside of the call back function is is we are responding by sending a file and inside the paranthesis the file that were sending, absolute file path. path.join will return the absolute file path and return index.htm,l which is relative file path, dirname is index.js file
 
 app.use('/css', express.static(path.join(__dirname, '../style.css')))//../ means look in my parent and find css file inside it
+app.use('/cssimage', express.static(path.join(__dirname, '../brooke-lark-4J059aGa5s4-unsplash.jpg')))
 
 
 
