@@ -1,0 +1,10 @@
+body{
+    margin:0;
+}
+
+h1 {
+    background-color: teal;
+    color:khaki;
+    padding: 20px;
+    margin: 0;
+}

@@ -11,13 +11,6 @@ app.get('/', (req, res) => {
 
 
 
-
-
-
-
-
-
-
 const port = process.env.PORT || 4006//if i have a port variable inside my env file use that as my port and if it does not exist use 4005. This is going to get the port from heroku app or if we testing locally it will assign to 4005. 
 
 app.listen(port, () =>{
