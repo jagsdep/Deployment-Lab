@@ -5,9 +5,10 @@ const path = require('path');//
 const app = express()// we invoked the function express on line 1 to act
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../index.html'))//normal get endpoint first parameter is backslash/2nd is callback function. Inside of the call back function is is we are responding by sending a file and inside the paranthesis the file that were sending, absolute file path. path.join will return the absolute file path and return index.htm,l which is relative file path, dirname is index.js file
+    res.sendFile(path.join(__dirname, '../index.html'))
+})//normal get endpoint first parameter is backslash/2nd is callback function. Inside of the call back function is is we are responding by sending a file and inside the paranthesis the file that were sending, absolute file path. path.join will return the absolute file path and return index.htm,l which is relative file path, dirname is index.js file
 
-})
+app.use('/js', express.static(path.join(__dirname, '../style.css')))
 
 
 
