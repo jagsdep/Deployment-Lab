@@ -6,12 +6,16 @@ const app = express()// we invoked the function express on line 1 to act
 
 //ROLLBAR
 // include and initialize the rollbar library with your access token
-var Rollbar = require('rollbar');
+// include and initialize the rollbar library with your access token
+var Rollbar = require('rollbar')
 var rollbar = new Rollbar({
-  accessToken: 'b88e6a2e08c146c0bee0065b6ef78965',
+  accessToken: '22e7a0b2a4ae46eba6db963046362b6a',
   captureUncaught: true,
   captureUnhandledRejections: true,
 })
+
+// // record a generic message and send it to Rollbar
+ rollbar.log('Hello world!')
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../index.html'))
@@ -24,7 +28,7 @@ app.use('/images', express.static(path.join(__dirname, '../images')))
 
 
 const port = process.env.PORT || 4006//if i have a port variable inside my env file use that as my port and if it does not exist use 4005. This is going to get the port from heroku app or if we testing locally it will assign to 4005. 
-
+app.use(rollbar.errorHandler());
 app.listen(port, () =>{
     console.log(`My app is JAMMIN onn port number ${port}`)
 });

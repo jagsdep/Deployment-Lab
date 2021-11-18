@@ -14,5 +14,14 @@
     "express": "^4.17.1",
     "nodemon": "^2.0.15",
     "rollbar": "^2.24.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jagsdep/Deployment-Lab.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jagsdep/Deployment-Lab/issues"
+  },
+  "homepage": "https://github.com/jagsdep/Deployment-Lab#readme"
 }
